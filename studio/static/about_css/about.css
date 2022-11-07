@@ -1,0 +1,114 @@
+
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    }
+
+.main-container{
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: auto;
+    width: 100%;
+}
+
+.image-container{  
+    justify-content: center;
+    align-items: center;
+    height: auto;
+    width:50%;
+    margin-top: 50px;
+    padding: 0px 30px 0px 30px;
+}
+
+.creator-container{
+    width: 50%;
+    height: auto;
+    margin:10px;
+}
+
+.creator-sub-container{
+    padding: 0px 30px 0px 30px;;
+}
+
+.creator-name{
+    font-size: 19px;
+    font-weight: 900;
+    margin-bottom: 15px;
+}
+.creator-prof{
+    font-size: 14px;
+    margin-bottom: 15px;
+    letter-spacing: 1.18px;
+    color: #a1a1a1;
+    font-weight: lighter;
+}
+.creator-desc{
+    margin-right: 20px;
+    font-size: 12px;
+    line-height: 24px;
+    color: #696969;
+    text-overflow: ellipsis;
+}
+/* Tabular media queries */
+@media screen and (min-width: 667px) and (max-width:1023px) {
+    *{
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+    }
+    .main-container{
+        /* background-color: rgb(199, 104, 104); */
+        margin-top: 10px;
+        margin-bottom: 10px;
+    }
+    .image-container{
+        display: block;
+        margin: 0px 30px 0px 30px;
+        /* flex-direction: column; */
+        /* background-color: rgb(128, 128, 164); */
+    }
+    .creator-sub-container{
+        padding: 30px;
+        margin-top:30px;
+        /* background-color: black; */
+    }
+    .creator-image{
+        width: 475px;
+        height: auto;
+    }
+}
+
+@media screen and (min-width: 300px) and (max-width: 666px) {
+    *{
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+    }
+    .main-container{
+        /* background-color: rgb(199, 104, 104); */
+        margin-top: 40px;
+        display: block;
+        height: auto;
+        margin-bottom: 5px;
+        text-align: left;
+    }
+    .image-container{
+        margin: 0px 40px 0px 40px;
+        display: block;
+        /* flex-direction: column; */
+        /* background-color: rgb(128, 128, 164); */
+    }
+    .creator-sub-container{
+        margin: 0px 5px 0px 5px;
+        width: 100%;
+        /* background-color: black; */
+    }
+    .creator-image{
+        width: 275px;
+        height: auto;
+    }
+    
+}

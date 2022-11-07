@@ -1,0 +1,35 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% load wagtailcore_tags wagtailimages_tags %}
+
+{% block body_class %}template-workdetailspage{% endblock %}
+
+{% block content %}
+    <link rel = "stylesheet" href="{%static 'work_css/work_details.css' %}">
+
+    <div class="main-container">
+
+        <p class="goback"><a href="{{ page.get_parent.url }}">GO BACK</a></p>
+
+
+        {% for item in page.gallery_images.all %}
+        <div class="image-container">
+            {% image item.image fill-800x500 as tmp_photo%}
+            <img src="{{ tmp_photo.url }}" width="{{ tmp_photo.width }}"
+            height="{{ tmp_photo.height }}" alt="{{ tmp_photo.alt }}" class="work-images">
+
+        </div>
+        {% endfor %}
+
+        <div class="details-container">
+            <div class="work-title"><h4>{{ page.work_name }}</h4></div>
+            <div class="work-description"> <p>{{ page.work_description |richtext}}</p> </div>
+        </div>
+
+    </div>
+    <div class="navigators">
+        <div class="previous"> < < prev</div>
+        <div class="next">next > ></div>
+    </div>
+{% endblock %}

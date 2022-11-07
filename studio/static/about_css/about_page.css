@@ -1,0 +1,188 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+.main-container{
+    display: flex;
+    flex-direction: row;
+    margin: 40px 50px 40px 50px;
+    height: auto;
+}
+
+.image-container{
+    width: 50%;
+}
+
+.image-sub-container{
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+}
+.creator-image{
+    width: 100%;
+    height: 600px;
+    object-fit: contain;
+}
+
+.creator-container{
+    width: 50%;
+    margin: 10px;
+    margin: auto 0px auto 0px;
+}
+
+.creator-sub-container{
+    padding: 30px;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.creator-name{
+    padding: 8px;
+    font-size: 19px;
+    padding: 8px;
+    font-weight: 900;
+}
+
+.creator-profession{
+    padding: 8px;
+    font-size: 12px;
+    margin-bottom: 15px;
+    letter-spacing: 1.18px;
+    color: #a1a1a1;
+    font-weight: lighter;
+}
+
+.creator-description{
+    padding: 8px;
+    font-size: 14px;
+    line-height: 24px;
+    color: #696969;
+}
+
+
+
+
+/* Media query for Tabular view */
+@media screen and (max-width: 950px) {
+
+.main-container{
+    flex-direction: column; 
+}
+
+.image-container{
+    width: 100%;
+    height: auto;  
+}
+.creator-sub-container{
+    padding: 10px;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.creator-image{
+    width: auto;
+    height: 240px;
+    display: block;
+    margin: 0 auto;
+}
+
+.creator-container{
+    width: 100%;
+    margin: 0 auto;
+}
+
+.creator-sub-container{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    padding: 10px;
+    /* align-items: flex-start; */
+    margin: 0 auto;
+    margin-top: 20px;
+    /* text-align: left; */
+}
+
+.creator-name{
+    font-size: 12px;
+    padding: 5px;
+}
+
+.creator-profession{
+    font-size: 10px;
+    padding: 5px;
+    margin: 0;
+    /* justify-content: middle; */
+}
+
+.creator-description p { 
+    font-size: 10px;
+    line-height: 15px;
+}
+}
+
+
+
+/* Media query for phone view */
+@media screen and (max-width: 540px) {
+
+    .main-container{
+        flex-direction: column; 
+    }
+    
+    .image-container{
+        width: 100%;
+        height: auto;  
+    }
+    
+    .creator-image{
+        width: 100%;
+        height: auto;
+        display: block;
+        /* margin: 0 auto; */
+    }
+    .creator-sub-container{
+        padding: 30px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+    }
+    
+    
+    .creator-container{
+        width: 100%;
+        margin: 0 auto;
+    }
+    
+    .creator-sub-container{
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        padding: 50px;
+        align-items: flex-start;
+        margin: 0 auto;
+        margin-top: 20px;
+        text-align: left;
+    }
+    
+    .creator-name{
+        font-size: 20px;
+        padding: 5px;
+    }
+    
+    .creator-profession{
+        font-size: 10px;
+        margin: 0;
+        /* justify-content: middle; */
+    }
+    
+    .creator-description p { 
+        font-size: 15px;
+        line-height: 27px;
+    }
+
+}
