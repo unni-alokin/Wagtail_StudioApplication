@@ -28,8 +28,9 @@
 
 .creator-container{
     width: 50%;
-    margin: 10px;
     margin: auto 0px auto 0px;
+    justify-content: center;
+    align-items: center;
 }
 
 .creator-sub-container{
@@ -64,125 +65,119 @@
 
 
 
-
-/* Media query for Tabular view */
-@media screen and (max-width: 950px) {
-
-.main-container{
-    flex-direction: column; 
-}
-
-.image-container{
-    width: 100%;
-    height: auto;  
-}
-.creator-sub-container{
-    padding: 10px;
-    display: flex;
-    justify-content: center;
-    flex-direction: column;
-}
-
-.creator-image{
-    width: auto;
-    height: 240px;
-    display: block;
-    margin: 0 auto;
-}
-
-.creator-container{
-    width: 100%;
-    margin: 0 auto;
-}
-
-.creator-sub-container{
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-    padding: 10px;
-    /* align-items: flex-start; */
-    margin: 0 auto;
-    margin-top: 20px;
-    /* text-align: left; */
-}
-
-.creator-name{
-    font-size: 12px;
-    padding: 5px;
-}
-
-.creator-profession{
-    font-size: 10px;
-    padding: 5px;
-    margin: 0;
-    /* justify-content: middle; */
-}
-
-.creator-description p { 
-    font-size: 10px;
-    line-height: 15px;
-}
-}
-
-
-
-/* Media query for phone view */
-@media screen and (max-width: 540px) {
-
+/* Mobile View */
+@media screen and (min-width: 190px) and (max-width: 480px){
     .main-container{
-        flex-direction: column; 
+        display: flex;
+        flex-direction: column;
+        margin: 40px 10px 40px 10px;
+        height: auto;
     }
-    
+
     .image-container{
         width: 100%;
-        height: auto;  
     }
-    
+
     .creator-image{
         width: 100%;
-        height: auto;
-        display: block;
-        /* margin: 0 auto; */
+        height: 400px;
+        object-fit: contain;
     }
-    .creator-sub-container{
-        padding: 30px;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        flex-direction: column;
-    }
-    
-    
+
     .creator-container{
         width: 100%;
+        padding: 10px;
         margin: 0 auto;
+        display: flex;  /* to make the child div centered */
+        align-items: center;
+        justify-content: center;
     }
-    
+
     .creator-sub-container{
-        width: 100%;
-        display: flex;
-        flex-direction: column;
-        padding: 50px;
-        align-items: flex-start;
-        margin: 0 auto;
-        margin-top: 20px;
-        text-align: left;
-    }
-    
-    .creator-name{
-        font-size: 20px;
         padding: 5px;
     }
     
-    .creator-profession{
-        font-size: 10px;
-        margin: 0;
-        /* justify-content: middle; */
+    .creator-name{
+        padding: 6px;
+        font-size: 19px;
+        font-weight: 900;
+        margin-bottom: 10px;
     }
     
-    .creator-description p { 
-        font-size: 15px;
-        line-height: 27px;
+    .creator-profession{
+        padding: 6px;
+        font-size: 12px;
+        margin-bottom: 10px;
+        letter-spacing: 1.18px;
+        color: #a1a1a1;
+        font-weight: lighter;
+    }
+    
+    .creator-description{
+        padding: 6px;
+        font-size: 12px;
+        line-height: 18px;
+        margin-bottom: 10px;
+        color: #696969;
+    }
+}
+
+
+
+
+
+/* for Ipads and Tablets */
+@media screen and (min-width: 481px) and (max-width: 900px){
+    .main-container{
+        display: flex;
+        flex-direction: column;
+        margin: 10px 10px 10px 10px;
+        height: auto;
     }
 
+    .image-container{
+        width: 100%;
+    }
+
+    .creator-image{
+        width: 100%;
+        height: 500px;
+        object-fit: contain;
+    }
+
+    .creator-container{
+        width: 100%;
+        margin: 10px 0px 10px 0px;
+    }
+
+    .creator-sub-container{
+        padding: 10px;
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+    }
+    
+    .creator-name{
+        padding: 6px;
+        font-size: 20px;
+        font-weight: 900;
+        margin-bottom: 10px;
+    }
+    
+    .creator-profession{
+        padding: 6px;
+        font-size: 12px;
+        margin-bottom: 10px;
+        letter-spacing: 1.18px;
+        color: #a1a1a1;
+        font-weight: lighter;
+    }
+    
+    .creator-description{
+        padding: 6px;
+        font-size: 12px;
+        line-height: 24px;
+        margin-bottom: 10px;
+        color: #696969;
+    }
 }

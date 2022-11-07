@@ -10,7 +10,7 @@
 
 .goback{
     margin: 100px 50px 10px 50px;
-    font-size: small;
+    font-size: 13px;
 }
 
 .image-container{
@@ -20,24 +20,41 @@
     margin: 10px 50px 10px 50px;
 }
 
+.image-sub-container{
+    width: 100%;
+    margin: 10px 0px 10px 0px;
+}
+
 .work-images{
     width: 100%;
-    height: auto;
+    height: 400px;
+    object-fit: cover;
 }
 
 .details-container{
-    margin: 10px 240px 10px 240px;
     display: flex;
     flex-direction: column;
-    text-align: left;
+    justify-content: center;
+    align-items: center;
+}
+
+.details-sub-container{
+    width: 60%;
+    justify-content: center;
 }
 
 .work-title{
     padding: 5px;
+    font-size: 28px;
+    line-height: 34px;
+    color: #1C1C1C;
 }
 
 .work-description{
     padding: 5px;
+    font-size: 14px;
+    line-height: 24px;
+    color: #696969;
 }
 .navigators{
     text-align: center;
@@ -46,7 +63,7 @@
     gap: 20px;
     margin-top: 10px;
     margin-bottom: 10px;
-    font-size: small;
+    font-size: 13px;
 }
 .previous{
     width: 50%;
@@ -55,63 +72,4 @@
 .next{
     width: 50%;
     text-align: left;
-}
-
-/* tabular view */
-@media screen and (max-width: 950px) {
-    .goback{
-        margin: 50px 20px 10px 20px;
-        font-size: 15px;
-    }
-    .image-container{
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        margin: 10px 20px 10px 20px;
-    }
-    .details-container{
-        margin: 30px 80px 10px 80px;
-        display: flex;
-        flex-direction: column;
-        text-align: left;
-        font-size: 15px;
-    }
-    
-    .work-title{
-        padding: 3px;
-    }
-    
-    .work-description{
-        padding: 3px;
-    }
-}
-
-/* phone view */
-@media screen and (max-width: 540px) {
-
-    .goback{
-        margin: 50px 20px 10px 20px;
-        font-size: 10px;
-    }
-    .image-container{
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        margin: 10px 20px 10px 20px;
-    }
-    .details-container{
-        margin: 30px 80px 10px 80px;
-        display: flex;
-        flex-direction: column;
-        text-align: left;
-        font-size: 10px;
-    }
-    
-    .work-title{
-        padding: 3px;
-    }
-    
-    .work-description{
-        padding: 3px;
-    }
 }
