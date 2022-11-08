@@ -7,6 +7,32 @@
     font-size: 12px;
 }
 
+.breads{
+    margin: 10px 50px 10px 50px;
+    font-size: 13px;
+}
+
+ul.breadcrumb {
+    list-style: none;
+  }
+  ul.breadcrumb li {
+    display: inline;
+    font-size: 13px;
+  }
+  ul.breadcrumb li+li:before {
+    padding: 2px;
+    color: black;
+    content: ">>";
+  }
+  ul.breadcrumb li a {
+    color: #000000;
+    text-decoration: none;
+  }
+  ul.breadcrumb li a:hover {
+    color: #696969;
+  }
+
+
 .main-details-container{
     margin: 100px 200px 100px 200px;
     display: flex;
@@ -48,6 +74,15 @@
         font-size: 12px;
     }
     
+    .breads{
+        margin: 5px 50px 10px 50px;
+        font-size: 12px;
+    }
+
+    ul.breadcrumb li {
+        font-size: 12px;
+    }
+
     .main-details-container{
         margin: 60px;
         display: flex;
@@ -89,6 +124,16 @@
         margin: 5px 15px 5px 15px;
         font-size: 7px;
     }
+
+    .breads{
+        margin: 5px 15px 5px 15px;
+        font-size: 7px;
+    }
+
+    ul.breadcrumb li {
+        font-size: 7px;
+    }
+
     .main-details-container{
         margin: 50px 15px 50px 15px;
         display: flex;

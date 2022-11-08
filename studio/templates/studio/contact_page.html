@@ -1,0 +1,44 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% load wagtailcore_tags wagtailimages_tags %}
+
+{% block body_class %}template-workdetailspage{% endblock %}
+
+{% block content %}
+
+    <link rel = "stylesheet" href="{%static 'contacts/contacts.css' %}">
+
+   <div class="main-container">
+
+            <div class="main-container-sub">
+                    <div class="contactus">
+                            <div class="contactus-sub">
+                                <div class="getintouch"><h2>Get in touch</h2></div>
+                                <form action="" method="POST" class="form">
+                                    {{form}}
+                                    <input type="submit" class="submit">
+                                </form>
+                            </div>
+                    </div>
+
+                    <div class="snippets">hello</div>
+            </div>
+
+
+   </div>
+
+
+
+
+
+
+
+
+<!-- <form action="" method="POST" class="form">
+        {{form}}
+        <input type="submit">
+
+</form> -->
+
+{% endblock %}

@@ -10,11 +10,11 @@
 
     <div class="main-container">
 
-        <p class="goback"><a href="{{ page.get_parent.url }}"> < < GO BACK</a></p>
+        <!-- <p class="goback"><a href="{{ page.get_parent.url }}"> < < GO BACK</a></p> -->
         <div class="breads">
             <ul class="breadcrumb">
-                <li><a href="{{ page.get_parent.url }}">work</a></li>
-                <li>{{ page.work_name }}</li>
+                <li><a href="{{ page.get_parent.url }}">Work</a></li>
+                <li class="selected">{{ page.work_name }}</li>
               </ul>
         </div>
 
@@ -37,7 +37,7 @@
 
     </div>
     <div class="navigators">
-        <div class="previous"> < < prev</div>
-        <div class="next">next > ></div>
+        <div class="previous"> <  prev</div>
+        <div class="next">next  ></div>
     </div>
 {% endblock %}

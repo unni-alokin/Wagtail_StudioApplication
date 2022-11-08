@@ -1,0 +1,66 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+.main-container{
+    margin-top: 100px ;
+    /* background-color: cadetblue; */
+}
+.main-container-sub{
+    padding: 10px;
+    display: flex;
+    flex-direction: row;
+}
+
+.contactus{
+    width: 60%;
+    padding: 30px;
+    /* background-color: cornflowerblue; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.getintouch{
+    margin: 10px auto;
+}
+
+
+.form{
+    display: flex;
+    flex-direction: column;
+    vertical-align: middle;
+}
+
+.contactus-sub{
+    width: 70%;
+    margin: 30px;
+    /* background-color: aquamarine; */
+}
+
+.form-name, .form-email, .form-subject, .form-message{
+    width: 100%;
+    padding: 10px 0px 10px 0px;
+    margin: 5px 0px 5px 0px;
+    border-width: 0px 0px 1px 0px;
+    border-color: #1C1C1C;
+    resize: vertical;
+}
+
+:focus {
+    outline: none;
+}
+
+::placeholder{
+    font-size: 14px;
+    color: #696969;
+}
+
+.submit{
+    margin: 10px 0px 10px 0px;
+    width: 100px;
+    height: 30px;
+    vertical-align: middle;
+}

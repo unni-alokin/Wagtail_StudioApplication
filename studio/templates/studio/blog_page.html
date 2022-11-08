@@ -9,7 +9,14 @@
     <link rel="stylesheet" type="text/css" href="{% static 'blog_css/blog_page.css' %}">
     
     <div class="main-container">
-        <p class="goback"><a href="{{ page.get_parent.url }}"> < < BACK</a></p>
+        <!-- <p class="goback"><a href="{{ page.get_parent.url }}"> < < GO BACK</a></p> -->
+
+        <div class="breads">
+            <ul class="breadcrumb">
+                <li><a href="{{ page.get_parent.url }}">Blogs</a></li>
+                <li>{{ page.blog_title }}</li>
+              </ul>
+        </div>
 
         <div class="main-details-container">
             <div class="blog-title">{{ page.blog_title }}</div>

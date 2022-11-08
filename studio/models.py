@@ -6,6 +6,7 @@ from wagtail.models import Page, Orderable
 from ckeditor.fields import RichTextField
 from wagtail.admin.panels import FieldPanel, InlinePanel
 from wagtail.search import index
+from django import forms
 
 # Create your models here.
 # About page models 
@@ -80,11 +81,18 @@ class BlogPageImage(Orderable):
 # Work Page 
 class WorkIndexPage(Page):
     intro = RichTextField(blank=True)
+    def get_context(self, request):
+        # Update context to include only published posts, ordered by reverse-chron
+        context = super().get_context(request)
+        workpages = self.get_children().live().order_by('-first_published_at')
+        context['workpages'] = workpages
+        return context
 
 class WorkPage(Page):
     work_name = models.CharField(max_length=250,null=True)
     work_subtitle = models.CharField(max_length=250,null=True)
     work_description=RichTextField(max_length=5000,null=True)
+
 
     def thumbnail_image(self):
         gallery_item = self.thumbnail.first()
@@ -124,3 +132,14 @@ class workDetailsPageGalleryImage(Orderable):
         FieldPanel('image')
 
     ]
+
+
+# Modal form
+
+class Contact(models.Model):
+    id = models.AutoField(primary_key=True)
+    name = models.CharField(max_length=200)
+    email = models.EmailField(max_length=50)
+    subject = models.CharField(max_length=200)
+    message = models.CharField(max_length=500)
+

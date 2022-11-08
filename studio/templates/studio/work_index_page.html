@@ -10,7 +10,7 @@
 
     <div class="main-container">
         <div class="work-cards">
-            {% for post in page.get_children %}
+            {% for post in workpages %}
                     {% with post=post.specific %} 
                     <div class="work-card">
                         {% with post.thumbnail_image as main_image %}
