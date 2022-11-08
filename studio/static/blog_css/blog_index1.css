@@ -83,7 +83,7 @@
 
 
 /* Mobile View */
-@media screen and (min-width: 200px) and (max-width: 480px){
+@media screen and (min-width: 150px) and (max-width: 480px){
     .main-container{
         margin-top: 100px;
         padding: 1px 20px 1px 20px;

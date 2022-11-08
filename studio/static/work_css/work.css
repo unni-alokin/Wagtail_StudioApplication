@@ -22,19 +22,26 @@
 .work-card {
     color: rgb(8, 8, 8);
     padding: 1px;
-    height: auto;
+    height: 400px;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    width: 100%;
+}
+.image-sub-container{
+    width: 100%;
+    justify-content: center;
+    align-items: center;
 }
 
 .grid-image{
     width: 100%;
-    height: auto;
+    height: 400px;
     opacity: 1;
     z-index: -1;
     transition: .5s ease;
+    object-fit: cover;
 }
 
 .work-contents{
@@ -47,22 +54,22 @@
     font-size: 20px;
     font-weight: 900;
 }
+
 .work-subtitle{
     font-size: 15px;
     font-weight: 400;
 }
 
 .work-card:hover .grid-image {
-    opacity: 0.2;
+    opacity: 0.6;
 }
   
 .work-card:hover .work-contents {
     opacity: 1;
 }
-  
 
 
-@media screen and (max-width: 950px) {
+@media screen and (max-width: 1070px) {
 
     .work-cards {
         width: 100%;
@@ -72,9 +79,46 @@
         grid-template-columns: repeat(2, 1fr);
         text-align: center;
     }
+
+    .image-sub-container{
+        width: 100%;
+        justify-content: center;
+        align-items: center;
+        filter: brightness(0.4);
+    }
+
+    .work-contents{
+        transition: .5s ease;
+        opacity: 1;
+        position: none;
+    }
+
+    .work-card {
+        color: rgb(255, 255, 255);
+        padding: 1px;
+        height: auto;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+    
+    .work-title p{
+        font-size: 20px;
+        font-weight: 900;
+        color: white;
+    }
+
+    .work-subtitle p {
+        font-size: 15px;
+        font-weight: 700;
+        color: white;
+    }
+
+    
 }
 
-@media screen and (max-width: 540px) {
+@media screen and (max-width: 680px) {
 
     .work-cards {
         width: 100%;
@@ -83,5 +127,32 @@
         grid-gap: 20px;
         grid-template-columns: repeat(1, 1fr);
         text-align: center;
+    }
+
+    .work-contents{
+        transition: .5s ease;
+        opacity: 1;
+        position: none;
+    }
+
+    .work-card {
+        color: rgb(255, 255, 255);
+        padding: 1px;
+        height: auto;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+    
+    .work-title p{
+        font-size: 20px;
+        font-weight: 900;
+        color: white;
+    }
+
+    .work-subtitle{
+        font-size: 15px;
+        font-weight: 700;
     }
 }

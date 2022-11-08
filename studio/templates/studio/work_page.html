@@ -11,7 +11,12 @@
     <div class="main-container">
 
         <p class="goback"><a href="{{ page.get_parent.url }}"> < < GO BACK</a></p>
-
+        <div class="breads">
+            <ul class="breadcrumb">
+                <li><a href="{{ page.get_parent.url }}">work</a></li>
+                <li>{{ page.work_name }}</li>
+              </ul>
+        </div>
 
         {% for item in page.gallery_images.all %}
         <div class="image-container">
